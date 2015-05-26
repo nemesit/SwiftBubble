@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		42CB85DB1B13BDB400368C64 /* SoapBubble.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85DA1B13BDB400368C64 /* SoapBubble.qtz */; };
 		42CB85DE1B14661200368C64 /* Soap_BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB85DD1B14661200368C64 /* Soap_BubbleView.swift */; };
-		42CB85E31B14705700368C64 /* soap 1080.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85E21B14705700368C64 /* soap 1080.mov */; };
 		42CB85E61B147FB300368C64 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85E41B147FB300368C64 /* thumbnail.png */; };
 		42CB85E71B147FB300368C64 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85E51B147FB300368C64 /* thumbnail@2x.png */; };
+		42CB85EA1B1514FE00368C64 /* SoapBubble1080p.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85E91B1514FE00368C64 /* SoapBubble1080p.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +19,10 @@
 		42CB85CC1B13BB5900368C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42CB85DA1B13BDB400368C64 /* SoapBubble.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = SoapBubble.qtz; sourceTree = "<group>"; };
 		42CB85DD1B14661200368C64 /* Soap_BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soap_BubbleView.swift; sourceTree = "<group>"; };
-		42CB85E21B14705700368C64 /* soap 1080.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "soap 1080.mov"; sourceTree = "<group>"; };
 		42CB85E41B147FB300368C64 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		42CB85E51B147FB300368C64 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		42CB85E81B14800F00368C64 /* thumbnail@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "thumbnail@2x.psd"; sourceTree = "<group>"; };
+		42CB85E91B1514FE00368C64 /* SoapBubble1080p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SoapBubble1080p.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				42CB85DA1B13BDB400368C64 /* SoapBubble.qtz */,
 				42CB85E41B147FB300368C64 /* thumbnail.png */,
 				42CB85E51B147FB300368C64 /* thumbnail@2x.png */,
-				42CB85E21B14705700368C64 /* soap 1080.mov */,
+				42CB85E91B1514FE00368C64 /* SoapBubble1080p.mov */,
 				42CB85E81B14800F00368C64 /* thumbnail@2x.psd */,
 				42CB85CC1B13BB5900368C64 /* Info.plist */,
 			);
@@ -142,8 +142,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42CB85E31B14705700368C64 /* soap 1080.mov in Resources */,
 				42CB85E71B147FB300368C64 /* thumbnail@2x.png in Resources */,
+				42CB85EA1B1514FE00368C64 /* SoapBubble1080p.mov in Resources */,
 				42CB85DB1B13BDB400368C64 /* SoapBubble.qtz in Resources */,
 				42CB85E61B147FB300368C64 /* thumbnail.png in Resources */,
 			);
@@ -310,6 +310,7 @@
 				42CB85D51B13BB5900368C64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
