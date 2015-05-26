@@ -6,8 +6,13 @@
 //  Copyright (c) 2015 Felix Grabowski. All rights reserved.
 //
 
-#import <ScreenSaver/ScreenSaver.h>
+//#import <ScreenSaver/ScreenSaver.h>
+@import ScreenSaver;
+@import Quartz;
 
 @interface Soap_BubbleView : ScreenSaverView
+{
+    QCView *qtz;
+}
 
 @end

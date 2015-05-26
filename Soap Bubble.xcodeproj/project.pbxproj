@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		42CB85CE1B13BB5900368C64 /* Soap_BubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 42CB85CD1B13BB5900368C64 /* Soap_BubbleView.h */; };
 		42CB85D01B13BB5900368C64 /* Soap_BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CB85CF1B13BB5900368C64 /* Soap_BubbleView.m */; };
+		42CB85D81B13BD6900368C64 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85D61B13BD6900368C64 /* thumbnail@2x.png */; };
+		42CB85D91B13BD6900368C64 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85D71B13BD6900368C64 /* thumbnail.png */; };
+		42CB85DB1B13BDB400368C64 /* SoapBubble.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 42CB85DA1B13BDB400368C64 /* SoapBubble.qtz */; };
+		42CB85DE1B14661200368C64 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CB85DD1B14661200368C64 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,11 @@
 		42CB85CC1B13BB5900368C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42CB85CD1B13BB5900368C64 /* Soap_BubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Soap_BubbleView.h; sourceTree = "<group>"; };
 		42CB85CF1B13BB5900368C64 /* Soap_BubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Soap_BubbleView.m; sourceTree = "<group>"; };
+		42CB85D61B13BD6900368C64 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		42CB85D71B13BD6900368C64 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		42CB85DA1B13BDB400368C64 /* SoapBubble.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = SoapBubble.qtz; sourceTree = "<group>"; };
+		42CB85DC1B14661200368C64 /* Soap Bubble-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Soap Bubble-Bridging-Header.h"; sourceTree = "<group>"; };
+		42CB85DD1B14661200368C64 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,8 @@
 				42CB85CD1B13BB5900368C64 /* Soap_BubbleView.h */,
 				42CB85CF1B13BB5900368C64 /* Soap_BubbleView.m */,
 				42CB85CB1B13BB5900368C64 /* Supporting Files */,
+				42CB85DD1B14661200368C64 /* File.swift */,
+				42CB85DC1B14661200368C64 /* Soap Bubble-Bridging-Header.h */,
 			);
 			path = "Soap Bubble";
 			sourceTree = "<group>";
@@ -58,6 +69,9 @@
 		42CB85CB1B13BB5900368C64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42CB85D61B13BD6900368C64 /* thumbnail@2x.png */,
+				42CB85D71B13BD6900368C64 /* thumbnail.png */,
+				42CB85DA1B13BDB400368C64 /* SoapBubble.qtz */,
 				42CB85CC1B13BB5900368C64 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -131,6 +145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CB85D91B13BD6900368C64 /* thumbnail.png in Resources */,
+				42CB85D81B13BD6900368C64 /* thumbnail@2x.png in Resources */,
+				42CB85DB1B13BDB400368C64 /* SoapBubble.qtz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42CB85D01B13BB5900368C64 /* Soap_BubbleView.m in Sources */,
+				42CB85DE1B14661200368C64 /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +246,14 @@
 		42CB85D41B13BB5900368C64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Soap Bubble/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Soap Bubble/Soap Bubble-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -239,10 +261,13 @@
 		42CB85D51B13BB5900368C64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Soap Bubble/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Soap Bubble/Soap Bubble-Bridging-Header.h";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

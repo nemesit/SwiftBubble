@@ -15,17 +15,28 @@
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
         [self setAnimationTimeInterval:1/30.0];
+        NSString *qtzComposition = [[NSBundle bundleForClass:[self class]] pathForResource:@"SoapBubble" ofType:@"qtz"];
+        if (qtzComposition) {
+            qtz = [[QCView alloc] initWithFrame: NSMakeRect(0, 0, NSWidth(frame), NSHeight(frame))];
+            if (qtz) {
+                [qtz loadCompositionFromFile:qtzComposition];
+                [qtz setMaxRenderingFrameRate: 30.0f];
+                [self addSubview:qtz];
+            }
+        }
     }
     return self;
 }
 
 - (void)startAnimation
 {
+    [qtz startRendering];
     [super startAnimation];
 }
 
 - (void)stopAnimation
 {
+    [qtz stopRendering];
     [super stopAnimation];
 }
 
