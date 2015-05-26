@@ -4,6 +4,9 @@ The Screen Saver was inspired by Apple's promotional videos for the new retina M
 Motivation was that the Screen Saver is not included with any current Apple device or OS.
 It is implemented with Swift and Quartz Composer but Photoshop had the biggest workload.  
 
+
+[ Click Here to Download it ]( ./downloads/SwiftBubble.zip )
+
 Preview:  
 ![Soap Bubble](preview.png)
 
