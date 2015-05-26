@@ -23,6 +23,7 @@
 		42CB85E51B147FB300368C64 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		42CB85E81B14800F00368C64 /* thumbnail@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "thumbnail@2x.psd"; sourceTree = "<group>"; };
 		42CB85E91B1514FE00368C64 /* SoapBubble1080p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SoapBubble1080p.mov; sourceTree = "<group>"; };
+		42CB85EB1B15219600368C64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				42CB85E91B1514FE00368C64 /* SoapBubble1080p.mov */,
 				42CB85E81B14800F00368C64 /* thumbnail@2x.psd */,
 				42CB85CC1B13BB5900368C64 /* Info.plist */,
+				42CB85EB1B15219600368C64 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
