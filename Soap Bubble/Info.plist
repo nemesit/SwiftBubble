@@ -23,6 +23,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Felix Grabowski. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>Soap_BubbleView</string>
+	<string>SoapBubbleView</string>
 </dict>
 </plist>

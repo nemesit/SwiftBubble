@@ -11,7 +11,7 @@ import Quartz
 
 var qtz:QCView?
 
-class Soap_BubbleView : ScreenSaverView {
+class SoapBubbleView : ScreenSaverView {
     convenience init() {
         self.init(frame: CGRectZero, isPreview: false)
     }
