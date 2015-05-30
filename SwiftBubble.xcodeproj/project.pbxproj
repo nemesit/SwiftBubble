@@ -1,0 +1,273 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4236EA6B1B19EB81000DA31F /* SwiftBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4236EA6A1B19EB81000DA31F /* SwiftBubbleView.h */; };
+		4236EA6D1B19EB81000DA31F /* SwiftBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4236EA6C1B19EB81000DA31F /* SwiftBubbleView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4236EA651B19EB81000DA31F /* SwiftBubble.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBubble.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		4236EA691B19EB81000DA31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4236EA6A1B19EB81000DA31F /* SwiftBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBubbleView.h; sourceTree = "<group>"; };
+		4236EA6C1B19EB81000DA31F /* SwiftBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftBubbleView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4236EA611B19EB81000DA31F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4236EA5B1B19EB81000DA31F = {
+			isa = PBXGroup;
+			children = (
+				4236EA671B19EB81000DA31F /* SwiftBubble */,
+				4236EA661B19EB81000DA31F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4236EA661B19EB81000DA31F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4236EA651B19EB81000DA31F /* SwiftBubble.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4236EA671B19EB81000DA31F /* SwiftBubble */ = {
+			isa = PBXGroup;
+			children = (
+				4236EA6A1B19EB81000DA31F /* SwiftBubbleView.h */,
+				4236EA6C1B19EB81000DA31F /* SwiftBubbleView.m */,
+				4236EA681B19EB81000DA31F /* Supporting Files */,
+			);
+			path = SwiftBubble;
+			sourceTree = "<group>";
+		};
+		4236EA681B19EB81000DA31F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4236EA691B19EB81000DA31F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4236EA621B19EB81000DA31F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EA6B1B19EB81000DA31F /* SwiftBubbleView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4236EA641B19EB81000DA31F /* SwiftBubble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4236EA701B19EB81000DA31F /* Build configuration list for PBXNativeTarget "SwiftBubble" */;
+			buildPhases = (
+				4236EA601B19EB81000DA31F /* Sources */,
+				4236EA611B19EB81000DA31F /* Frameworks */,
+				4236EA621B19EB81000DA31F /* Headers */,
+				4236EA631B19EB81000DA31F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftBubble;
+			productName = SwiftBubble;
+			productReference = 4236EA651B19EB81000DA31F /* SwiftBubble.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4236EA5C1B19EB81000DA31F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Felix Grabowski";
+				TargetAttributes = {
+					4236EA641B19EB81000DA31F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 4236EA5F1B19EB81000DA31F /* Build configuration list for PBXProject "SwiftBubble" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4236EA5B1B19EB81000DA31F;
+			productRefGroup = 4236EA661B19EB81000DA31F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4236EA641B19EB81000DA31F /* SwiftBubble */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4236EA631B19EB81000DA31F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4236EA601B19EB81000DA31F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EA6D1B19EB81000DA31F /* SwiftBubbleView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4236EA6E1B19EB81000DA31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4236EA6F1B19EB81000DA31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4236EA711B19EB81000DA31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftBubble/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		4236EA721B19EB81000DA31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftBubble/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4236EA5F1B19EB81000DA31F /* Build configuration list for PBXProject "SwiftBubble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4236EA6E1B19EB81000DA31F /* Debug */,
+				4236EA6F1B19EB81000DA31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4236EA701B19EB81000DA31F /* Build configuration list for PBXNativeTarget "SwiftBubble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4236EA711B19EB81000DA31F /* Debug */,
+				4236EA721B19EB81000DA31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4236EA5C1B19EB81000DA31F /* Project object */;
+}
