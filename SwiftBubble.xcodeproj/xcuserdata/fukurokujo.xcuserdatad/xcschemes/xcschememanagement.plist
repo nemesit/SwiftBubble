@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ScreenSaverTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SwiftBubble.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>SwiftBubbleTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>VideoLoopTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4236EA641B19EB81000DA31F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4236EA801B19EC6C000DA31F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4236EA911B19EC6D000DA31F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4236EAA31B19ECAD000DA31F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4236EAB21B19F76D000DA31F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4236EAC31B19F76E000DA31F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

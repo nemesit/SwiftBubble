@@ -7,19 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4236EA6B1B19EB81000DA31F /* SwiftBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4236EA6A1B19EB81000DA31F /* SwiftBubbleView.h */; };
-		4236EA6D1B19EB81000DA31F /* SwiftBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4236EA6C1B19EB81000DA31F /* SwiftBubbleView.m */; };
+		4236EA741B19EBAB000DA31F /* SwiftBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EA731B19EBAB000DA31F /* SwiftBubbleView.swift */; };
+		4236EA791B19EBEC000DA31F /* SoapBubble.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA751B19EBEC000DA31F /* SoapBubble.qtz */; };
+		4236EA7A1B19EBEC000DA31F /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA761B19EBEC000DA31F /* thumbnail.png */; };
+		4236EA7B1B19EBEC000DA31F /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA771B19EBEC000DA31F /* thumbnail@2x.png */; };
+		4236EA7C1B19EBEC000DA31F /* SwiftBubble.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA781B19EBEC000DA31F /* SwiftBubble.mov */; };
+		4236EAA91B19ECAD000DA31F /* SwiftBubbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EAA81B19ECAD000DA31F /* SwiftBubbleTests.swift */; };
+		4236EAAE1B19F07B000DA31F /* SoapBubble1080p.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4236EAAD1B19F07B000DA31F /* SoapBubble1080p.mov */; };
+		4236EAB81B19F76D000DA31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EAB71B19F76D000DA31F /* AppDelegate.swift */; };
+		4236EABA1B19F76D000DA31F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EAB91B19F76D000DA31F /* ViewController.swift */; };
+		4236EABC1B19F76D000DA31F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4236EABB1B19F76D000DA31F /* Images.xcassets */; };
+		4236EABF1B19F76E000DA31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4236EABD1B19F76E000DA31F /* Main.storyboard */; };
+		4236EACB1B19F76E000DA31F /* VideoLoopTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EACA1B19F76E000DA31F /* VideoLoopTestTests.swift */; };
+		4236EAD31B19F78B000DA31F /* SwiftBubble.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4236EAD21B19F78B000DA31F /* SwiftBubble.mov */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4236EAC51B19F76E000DA31F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4236EA5C1B19EB81000DA31F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4236EAB21B19F76D000DA31F;
+			remoteInfo = VideoLoopTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4236EA651B19EB81000DA31F /* SwiftBubble.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBubble.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		4236EA691B19EB81000DA31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4236EA6A1B19EB81000DA31F /* SwiftBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBubbleView.h; sourceTree = "<group>"; };
-		4236EA6C1B19EB81000DA31F /* SwiftBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftBubbleView.m; sourceTree = "<group>"; };
+		4236EA731B19EBAB000DA31F /* SwiftBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBubbleView.swift; sourceTree = "<group>"; };
+		4236EA751B19EBEC000DA31F /* SoapBubble.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = SoapBubble.qtz; sourceTree = "<group>"; };
+		4236EA761B19EBEC000DA31F /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		4236EA771B19EBEC000DA31F /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		4236EA781B19EBEC000DA31F /* SwiftBubble.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SwiftBubble.mov; sourceTree = "<group>"; };
+		4236EAA41B19ECAD000DA31F /* SwiftBubbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBubbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4236EAA71B19ECAD000DA31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4236EAA81B19ECAD000DA31F /* SwiftBubbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBubbleTests.swift; sourceTree = "<group>"; };
+		4236EAAD1B19F07B000DA31F /* SoapBubble1080p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SoapBubble1080p.mov; sourceTree = "<group>"; };
+		4236EAB31B19F76D000DA31F /* VideoLoopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoLoopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4236EAB61B19F76D000DA31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4236EAB71B19F76D000DA31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4236EAB91B19F76D000DA31F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4236EABB1B19F76D000DA31F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4236EABE1B19F76E000DA31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4236EAC41B19F76E000DA31F /* VideoLoopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoLoopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4236EAC91B19F76E000DA31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4236EACA1B19F76E000DA31F /* VideoLoopTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLoopTestTests.swift; sourceTree = "<group>"; };
+		4236EAD21B19F78B000DA31F /* SwiftBubble.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SwiftBubble.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4236EA611B19EB81000DA31F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAA11B19ECAD000DA31F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAB01B19F76D000DA31F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAC11B19F76E000DA31F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				4236EA671B19EB81000DA31F /* SwiftBubble */,
+				4236EAA51B19ECAD000DA31F /* SwiftBubbleTests */,
+				4236EAB41B19F76D000DA31F /* VideoLoopTest */,
+				4236EAC71B19F76E000DA31F /* VideoLoopTestTests */,
 				4236EA661B19EB81000DA31F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				4236EA651B19EB81000DA31F /* SwiftBubble.saver */,
+				4236EAA41B19ECAD000DA31F /* SwiftBubbleTests.xctest */,
+				4236EAB31B19F76D000DA31F /* VideoLoopTest.app */,
+				4236EAC41B19F76E000DA31F /* VideoLoopTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +113,7 @@
 		4236EA671B19EB81000DA31F /* SwiftBubble */ = {
 			isa = PBXGroup;
 			children = (
-				4236EA6A1B19EB81000DA31F /* SwiftBubbleView.h */,
-				4236EA6C1B19EB81000DA31F /* SwiftBubbleView.m */,
+				4236EA731B19EBAB000DA31F /* SwiftBubbleView.swift */,
 				4236EA681B19EB81000DA31F /* Supporting Files */,
 			);
 			path = SwiftBubble;
@@ -58,7 +122,67 @@
 		4236EA681B19EB81000DA31F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4236EA751B19EBEC000DA31F /* SoapBubble.qtz */,
+				4236EA771B19EBEC000DA31F /* thumbnail@2x.png */,
+				4236EA761B19EBEC000DA31F /* thumbnail.png */,
+				4236EA781B19EBEC000DA31F /* SwiftBubble.mov */,
 				4236EA691B19EB81000DA31F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4236EAA51B19ECAD000DA31F /* SwiftBubbleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4236EAA81B19ECAD000DA31F /* SwiftBubbleTests.swift */,
+				4236EAAD1B19F07B000DA31F /* SoapBubble1080p.mov */,
+				4236EAA61B19ECAD000DA31F /* Supporting Files */,
+			);
+			path = SwiftBubbleTests;
+			sourceTree = "<group>";
+		};
+		4236EAA61B19ECAD000DA31F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4236EAA71B19ECAD000DA31F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4236EAB41B19F76D000DA31F /* VideoLoopTest */ = {
+			isa = PBXGroup;
+			children = (
+				4236EAB71B19F76D000DA31F /* AppDelegate.swift */,
+				4236EAB91B19F76D000DA31F /* ViewController.swift */,
+				4236EABB1B19F76D000DA31F /* Images.xcassets */,
+				4236EAD21B19F78B000DA31F /* SwiftBubble.mov */,
+				4236EABD1B19F76E000DA31F /* Main.storyboard */,
+				4236EAB51B19F76D000DA31F /* Supporting Files */,
+			);
+			path = VideoLoopTest;
+			sourceTree = "<group>";
+		};
+		4236EAB51B19F76D000DA31F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4236EAB61B19F76D000DA31F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4236EAC71B19F76E000DA31F /* VideoLoopTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				4236EACA1B19F76E000DA31F /* VideoLoopTestTests.swift */,
+				4236EAC81B19F76E000DA31F /* Supporting Files */,
+			);
+			path = VideoLoopTestTests;
+			sourceTree = "<group>";
+		};
+		4236EAC81B19F76E000DA31F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4236EAC91B19F76E000DA31F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -70,7 +194,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4236EA6B1B19EB81000DA31F /* SwiftBubbleView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +208,7 @@
 				4236EA611B19EB81000DA31F /* Frameworks */,
 				4236EA621B19EB81000DA31F /* Headers */,
 				4236EA631B19EB81000DA31F /* Resources */,
+				4261AF801BE78827001E8984 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -95,17 +219,81 @@
 			productReference = 4236EA651B19EB81000DA31F /* SwiftBubble.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
+		4236EAA31B19ECAD000DA31F /* SwiftBubbleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4236EAAA1B19ECAD000DA31F /* Build configuration list for PBXNativeTarget "SwiftBubbleTests" */;
+			buildPhases = (
+				4236EAA01B19ECAD000DA31F /* Sources */,
+				4236EAA11B19ECAD000DA31F /* Frameworks */,
+				4236EAA21B19ECAD000DA31F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftBubbleTests;
+			productName = SwiftBubbleTests;
+			productReference = 4236EAA41B19ECAD000DA31F /* SwiftBubbleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4236EAB21B19F76D000DA31F /* VideoLoopTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4236EACC1B19F76E000DA31F /* Build configuration list for PBXNativeTarget "VideoLoopTest" */;
+			buildPhases = (
+				4236EAAF1B19F76D000DA31F /* Sources */,
+				4236EAB01B19F76D000DA31F /* Frameworks */,
+				4236EAB11B19F76D000DA31F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoLoopTest;
+			productName = VideoLoopTest;
+			productReference = 4236EAB31B19F76D000DA31F /* VideoLoopTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4236EAC31B19F76E000DA31F /* VideoLoopTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4236EACF1B19F76E000DA31F /* Build configuration list for PBXNativeTarget "VideoLoopTestTests" */;
+			buildPhases = (
+				4236EAC01B19F76E000DA31F /* Sources */,
+				4236EAC11B19F76E000DA31F /* Frameworks */,
+				4236EAC21B19F76E000DA31F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4236EAC61B19F76E000DA31F /* PBXTargetDependency */,
+			);
+			name = VideoLoopTestTests;
+			productName = VideoLoopTestTests;
+			productReference = 4236EAC41B19F76E000DA31F /* VideoLoopTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4236EA5C1B19EB81000DA31F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Felix Grabowski";
 				TargetAttributes = {
 					4236EA641B19EB81000DA31F = {
 						CreatedOnToolsVersion = 6.3.2;
+					};
+					4236EAA31B19ECAD000DA31F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					4236EAB21B19F76D000DA31F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					4236EAC31B19F76E000DA31F = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 4236EAB21B19F76D000DA31F;
 					};
 				};
 			};
@@ -115,6 +303,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4236EA5B1B19EB81000DA31F;
 			productRefGroup = 4236EA661B19EB81000DA31F /* Products */;
@@ -122,6 +311,9 @@
 			projectRoot = "";
 			targets = (
 				4236EA641B19EB81000DA31F /* SwiftBubble */,
+				4236EAA31B19ECAD000DA31F /* SwiftBubbleTests */,
+				4236EAB21B19F76D000DA31F /* VideoLoopTest */,
+				4236EAC31B19F76E000DA31F /* VideoLoopTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,21 +323,110 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4236EA7A1B19EBEC000DA31F /* thumbnail.png in Resources */,
+				4236EA791B19EBEC000DA31F /* SoapBubble.qtz in Resources */,
+				4236EA7B1B19EBEC000DA31F /* thumbnail@2x.png in Resources */,
+				4236EA7C1B19EBEC000DA31F /* SwiftBubble.mov in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAA21B19ECAD000DA31F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EAAE1B19F07B000DA31F /* SoapBubble1080p.mov in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAB11B19F76D000DA31F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EABC1B19F76D000DA31F /* Images.xcassets in Resources */,
+				4236EAD31B19F78B000DA31F /* SwiftBubble.mov in Resources */,
+				4236EABF1B19F76E000DA31F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAC21B19F76E000DA31F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4261AF801BE78827001E8984 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will put a link to the screen saver in the current user's Screen Saver folder (~/library/Screen Savers/) if you're building in debug, but clears out the screen saver for release builds.\n\n# Make sure Screen Savers folder exists\n#if ! [ -d \"${USER_LIBRARY_DIR}/Screen Savers\" ]; then\n#mkdir \"${USER_LIBRARY_DIR}/Screen Savers\"\n#fi\n\n\n# Clean up any previous products/symbolic links in the Screen Savers folder\nif [ -a \"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\" ]; then\nrm -Rf \"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\"\nfi\n\n# Depending on the build configuration, link to the most recent product\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n# if we're debugging, add a symbolic link to the screen saver\nln -sf \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \\\n\"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4236EA601B19EB81000DA31F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4236EA6D1B19EB81000DA31F /* SwiftBubbleView.m in Sources */,
+				4236EA741B19EBAB000DA31F /* SwiftBubbleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAA01B19ECAD000DA31F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EAA91B19ECAD000DA31F /* SwiftBubbleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAAF1B19F76D000DA31F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EABA1B19F76D000DA31F /* ViewController.swift in Sources */,
+				4236EAB81B19F76D000DA31F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4236EAC01B19F76E000DA31F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4236EACB1B19F76E000DA31F /* VideoLoopTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4236EAC61B19F76E000DA31F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4236EAB21B19F76D000DA31F /* VideoLoopTest */;
+			targetProxy = 4236EAC51B19F76E000DA31F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4236EABD1B19F76E000DA31F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4236EABE1B19F76E000DA31F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4236EA6E1B19EB81000DA31F /* Debug */ = {
@@ -168,6 +449,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -228,10 +510,15 @@
 		4236EA711B19EB81000DA31F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SwiftBubble/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -239,11 +526,119 @@
 		4236EA721B19EB81000DA31F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SwiftBubble/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		4236EAAB1B19ECAD000DA31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftBubbleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4236EAAC1B19ECAD000DA31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftBubbleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4236EACD1B19F76E000DA31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VideoLoopTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4236EACE1B19F76E000DA31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VideoLoopTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4236EAD01B19F76E000DA31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VideoLoopTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoLoopTest.app/Contents/MacOS/VideoLoopTest";
+			};
+			name = Debug;
+		};
+		4236EAD11B19F76E000DA31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VideoLoopTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoLoopTest.app/Contents/MacOS/VideoLoopTest";
 			};
 			name = Release;
 		};
@@ -266,6 +661,34 @@
 				4236EA721B19EB81000DA31F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4236EAAA1B19ECAD000DA31F /* Build configuration list for PBXNativeTarget "SwiftBubbleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4236EAAB1B19ECAD000DA31F /* Debug */,
+				4236EAAC1B19ECAD000DA31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4236EACC1B19F76E000DA31F /* Build configuration list for PBXNativeTarget "VideoLoopTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4236EACD1B19F76E000DA31F /* Debug */,
+				4236EACE1B19F76E000DA31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4236EACF1B19F76E000DA31F /* Build configuration list for PBXNativeTarget "VideoLoopTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4236EAD01B19F76E000DA31F /* Debug */,
+				4236EAD11B19F76E000DA31F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
