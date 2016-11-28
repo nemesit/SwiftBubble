@@ -11,42 +11,53 @@ import ScreenSaver
 import AVFoundation
 import AVKit
 
-class SoapBubbleView : ScreenSaverView {
+
+class SoapBubbleView: ScreenSaverView {
     
-    var videoView:AVPlayerView?
+    var videoView:NSView?
     let frameRate = 29.97
     var player:AVPlayer?
     
     convenience init() {
-        self.init(frame: CGRectZero, isPreview: false)
+        self.init(frame: CGRect.zero, isPreview: false)
     }
+    
+    static var layerClass: AnyClass {
+		return AVPlayerLayer.self
+	}
+    
+//    var playerLayer: AVPlayerLayer {
+//        return layer as! AVPlayerLayer
+//    }
     
     override init!(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
         self.animationTimeInterval = 1.0 / frameRate
         
-        guard let soapBubblePath = NSBundle(forClass: self.dynamicType).pathForResource("SwiftBubble", ofType: "mov") else {
+        guard let soapBubblePath = Bundle(for: type(of: self)).path(forResource: "SwiftBubble", ofType: "mov") else {
             fatalError("path to bubble not found")
         }
         
-        let fileURL = NSURL.fileURLWithPath(soapBubblePath)
-        let asset = AVAsset(URL: fileURL)//AVAsset.assetWithURL(fileURL)  as? AVAsset
+        let fileURL = URL(fileURLWithPath: soapBubblePath)
+        let asset = AVAsset(url: fileURL)//AVAsset.assetWithURL(fileURL)  as? AVAsset
         let playerItem = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: playerItem)
         let playerLayer = AVPlayerLayer(player: player!)
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        playerLayer.frame = NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2)
         
+        let videoView = NSView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))//AVPlayerView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))
+        videoView.wantsLayer = true
+        videoView.layer!.frame = videoView.frame
+        videoView.layer!.addSublayer(playerLayer)
         
-        let videoView = AVPlayerView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))
-
+//        playerLayer.backgroundColor = NSColor.white.cgColor /// for debugging the view
         
         centerView(videoView, inView: self)
-        videoView.player = player
-        videoView.controlsStyle = .None
         self.addSubview(videoView)
         
         //loop
-        player!.actionAtItemEnd = .None
+        player!.actionAtItemEnd = .none
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,18 +66,20 @@ class SoapBubbleView : ScreenSaverView {
     
     
     override func startAnimation() {
+//        Swift.print(self.playerLayer.frame)
+
         player!.play()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "restartVideo", name: AVPlayerItemDidPlayToEndTimeNotification, object: player!.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(SoapBubbleView.restartVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
         super.startAnimation()
     }
     
     override func stopAnimation() {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
         super.stopAnimation()
     }
     
-    override func drawRect(rect: NSRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: NSRect) {
+        super.draw(rect)
     }
     
     override func animateOneFrame() {
@@ -85,41 +98,41 @@ class SoapBubbleView : ScreenSaverView {
         let seconds:Int64 = 0
         let preferredTimeScale:Int32 = 1
         let seekTime:CMTime = CMTimeMake(seconds, preferredTimeScale)
-        player!.seekToTime(seekTime)
+        player!.seek(to: seekTime)
         player!.play()
     }
     
-    func centerView(v1:NSView, inView v2:NSView) {
+    func centerView(_ v1:NSView, inView v2:NSView) {
         
         v1.translatesAutoresizingMaskIntoConstraints = false
         v2.translatesAutoresizingMaskIntoConstraints = false
-        let multiplier:CGFloat = 0.75 // video scaling
+        let multiplier:CGFloat = 0.5//0.75 // video scaling
         let equalWidth = NSLayoutConstraint(item: v1,
-                                       attribute:NSLayoutAttribute.Width,
-                                       relatedBy:NSLayoutRelation.Equal,
+                                       attribute:NSLayoutAttribute.width,
+                                       relatedBy:NSLayoutRelation.equal,
                                           toItem:self,
-                                       attribute:NSLayoutAttribute.Width,
+                                       attribute:NSLayoutAttribute.width,
                                       multiplier:multiplier,
                                         constant:0);
         let equalHeight = NSLayoutConstraint(item: v1,
-                                        attribute:NSLayoutAttribute.Height,
-                                        relatedBy:NSLayoutRelation.Equal,
+                                        attribute:NSLayoutAttribute.height,
+                                        relatedBy:NSLayoutRelation.equal,
                                            toItem:self,
-                                        attribute:NSLayoutAttribute.Height,
+                                        attribute:NSLayoutAttribute.height,
                                        multiplier:multiplier,
                                          constant:0);
         let centerX = NSLayoutConstraint(item: v1,
-                                    attribute:NSLayoutAttribute.CenterX,
-                                    relatedBy:NSLayoutRelation.Equal,
+                                    attribute:NSLayoutAttribute.centerX,
+                                    relatedBy:NSLayoutRelation.equal,
                                        toItem:self,
-                                    attribute:NSLayoutAttribute.CenterX,
+                                    attribute:NSLayoutAttribute.centerX,
                                    multiplier:1.0,
                                      constant:0);
         let centerY = NSLayoutConstraint(item: v1,
-                                    attribute:NSLayoutAttribute.CenterY,
-                                    relatedBy:NSLayoutRelation.Equal,
+                                    attribute:NSLayoutAttribute.centerY,
+                                    relatedBy:NSLayoutRelation.equal,
                                        toItem:self,
-                                    attribute:NSLayoutAttribute.CenterY,
+                                    attribute:NSLayoutAttribute.centerY,
                                    multiplier:1.0,
                                      constant:0);
         
