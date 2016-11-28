@@ -78,7 +78,7 @@ class SoapBubbleView: ScreenSaverView {
         super.draw(rect)
     }
     
-    override func animateOneFrame() {        
+    override func animateOneFrame() {
     }
     
     override func hasConfigureSheet() -> Bool {
