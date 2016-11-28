@@ -5,7 +5,7 @@ Motivation was that the Screen Saver is not included with any current Apple devi
 It is implemented with Swift and Quartz Composer but Photoshop had the biggest workload.  
 
 
-[ Click Here to Download it ](https://github.com/nemesit/SwiftBubble/blob/master/downloads/SwiftBubble.zip?raw=true)
+[ Click Here to Download it ](https://github.com/nemesit/SwiftBubble/releases/download/1.1/SwiftBubble.zip)
 
 Preview:  
 ![Soap Bubble](preview.png)
