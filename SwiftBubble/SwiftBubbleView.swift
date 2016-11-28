@@ -14,9 +14,9 @@ import AVKit
 
 class SoapBubbleView: ScreenSaverView {
     
-    var videoView:NSView?
+    var videoView:NSView!
     let frameRate = 29.97
-    var player:AVPlayer?
+    var player:AVPlayer!
     
     convenience init() {
         self.init(frame: CGRect.zero, isPreview: false)
@@ -25,10 +25,6 @@ class SoapBubbleView: ScreenSaverView {
     static var layerClass: AnyClass {
 		return AVPlayerLayer.self
 	}
-    
-//    var playerLayer: AVPlayerLayer {
-//        return layer as! AVPlayerLayer
-//    }
     
     override init!(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
@@ -39,25 +35,24 @@ class SoapBubbleView: ScreenSaverView {
         }
         
         let fileURL = URL(fileURLWithPath: soapBubblePath)
-        let asset = AVAsset(url: fileURL)//AVAsset.assetWithURL(fileURL)  as? AVAsset
+        let asset = AVAsset(url: fileURL)
         let playerItem = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: playerItem)
-        let playerLayer = AVPlayerLayer(player: player!)
+        let playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
-        playerLayer.frame = NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2)
         
-        let videoView = NSView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))//AVPlayerView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))
+        let videoView = NSView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))
         videoView.wantsLayer = true
-        videoView.layer!.frame = videoView.frame
-        videoView.layer!.addSublayer(playerLayer)
-        
+
+        centerView(videoView, inView: self)
+        playerLayer.frame = videoView.frame
+        videoView.layer = playerLayer
 //        playerLayer.backgroundColor = NSColor.white.cgColor /// for debugging the view
         
-        centerView(videoView, inView: self)
         self.addSubview(videoView)
         
         //loop
-        player!.actionAtItemEnd = .none
+        player.actionAtItemEnd = .none
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,10 +61,11 @@ class SoapBubbleView: ScreenSaverView {
     
     
     override func startAnimation() {
-//        Swift.print(self.playerLayer.frame)
-
-        player!.play()
-        NotificationCenter.default.addObserver(self, selector: #selector(SoapBubbleView.restartVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
+        player.play()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(SoapBubbleView.restartVideo),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: player.currentItem)
         super.startAnimation()
     }
     
@@ -82,8 +78,7 @@ class SoapBubbleView: ScreenSaverView {
         super.draw(rect)
     }
     
-    override func animateOneFrame() {
-        
+    override func animateOneFrame() {        
     }
     
     override func hasConfigureSheet() -> Bool {
@@ -98,15 +93,15 @@ class SoapBubbleView: ScreenSaverView {
         let seconds:Int64 = 0
         let preferredTimeScale:Int32 = 1
         let seekTime:CMTime = CMTimeMake(seconds, preferredTimeScale)
-        player!.seek(to: seekTime)
-        player!.play()
+        player.seek(to: seekTime)
+        player.play()
     }
     
     func centerView(_ v1:NSView, inView v2:NSView) {
         
         v1.translatesAutoresizingMaskIntoConstraints = false
         v2.translatesAutoresizingMaskIntoConstraints = false
-        let multiplier:CGFloat = 0.5//0.75 // video scaling
+        let multiplier:CGFloat = 0.75 // video scaling
         let equalWidth = NSLayoutConstraint(item: v1,
                                        attribute:NSLayoutAttribute.width,
                                        relatedBy:NSLayoutRelation.equal,
