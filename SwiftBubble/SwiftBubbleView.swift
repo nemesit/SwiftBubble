@@ -11,8 +11,7 @@ import ScreenSaver
 import AVFoundation
 import AVKit
 
-
-class SoapBubbleView: ScreenSaverView {
+class SwiftBubbleView: ScreenSaverView {
     
     var videoView:NSView!
     let frameRate = 29.97
@@ -39,7 +38,7 @@ class SoapBubbleView: ScreenSaverView {
         let playerItem = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: playerItem)
         let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         
         let videoView = NSView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))
         videoView.wantsLayer = true
@@ -63,7 +62,7 @@ class SoapBubbleView: ScreenSaverView {
     override func startAnimation() {
         player.play()
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(SoapBubbleView.restartVideo),
+                                               selector: #selector(SwiftBubbleView.restartVideo),
                                                name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                                                object: player.currentItem)
         super.startAnimation()
@@ -81,15 +80,15 @@ class SoapBubbleView: ScreenSaverView {
     override func animateOneFrame() {
     }
     
-    override func hasConfigureSheet() -> Bool {
+    override var hasConfigureSheet: Bool {
         return false
     }
     
-    override func configureSheet() -> NSWindow? {
+    override var configureSheet: NSWindow? {
         return nil
     }
     
-    func restartVideo() {
+    @objc func restartVideo() {
         let seconds:Int64 = 0
         let preferredTimeScale:Int32 = 1
         let seekTime:CMTime = CMTimeMake(seconds, preferredTimeScale)
@@ -103,31 +102,31 @@ class SoapBubbleView: ScreenSaverView {
         v2.translatesAutoresizingMaskIntoConstraints = false
         let multiplier:CGFloat = 0.75 // video scaling
         let equalWidth = NSLayoutConstraint(item: v1,
-                                       attribute:NSLayoutAttribute.width,
-                                       relatedBy:NSLayoutRelation.equal,
+                                       attribute:NSLayoutConstraint.Attribute.width,
+                                       relatedBy:NSLayoutConstraint.Relation.equal,
                                           toItem:self,
-                                       attribute:NSLayoutAttribute.width,
+                                       attribute:NSLayoutConstraint.Attribute.width,
                                       multiplier:multiplier,
                                         constant:0);
         let equalHeight = NSLayoutConstraint(item: v1,
-                                        attribute:NSLayoutAttribute.height,
-                                        relatedBy:NSLayoutRelation.equal,
+                                        attribute:NSLayoutConstraint.Attribute.height,
+                                        relatedBy:NSLayoutConstraint.Relation.equal,
                                            toItem:self,
-                                        attribute:NSLayoutAttribute.height,
+                                        attribute:NSLayoutConstraint.Attribute.height,
                                        multiplier:multiplier,
                                          constant:0);
         let centerX = NSLayoutConstraint(item: v1,
-                                    attribute:NSLayoutAttribute.centerX,
-                                    relatedBy:NSLayoutRelation.equal,
+                                    attribute:NSLayoutConstraint.Attribute.centerX,
+                                    relatedBy:NSLayoutConstraint.Relation.equal,
                                        toItem:self,
-                                    attribute:NSLayoutAttribute.centerX,
+                                    attribute:NSLayoutConstraint.Attribute.centerX,
                                    multiplier:1.0,
                                      constant:0);
         let centerY = NSLayoutConstraint(item: v1,
-                                    attribute:NSLayoutAttribute.centerY,
-                                    relatedBy:NSLayoutRelation.equal,
+                                    attribute:NSLayoutConstraint.Attribute.centerY,
+                                    relatedBy:NSLayoutConstraint.Relation.equal,
                                        toItem:self,
-                                    attribute:NSLayoutAttribute.centerY,
+                                    attribute:NSLayoutConstraint.Attribute.centerY,
                                    multiplier:1.0,
                                      constant:0);
         
