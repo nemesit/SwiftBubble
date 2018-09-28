@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4236EA741B19EBAB000DA31F /* SwiftBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EA731B19EBAB000DA31F /* SwiftBubbleView.swift */; };
-		4236EA791B19EBEC000DA31F /* SoapBubble.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA751B19EBEC000DA31F /* SoapBubble.qtz */; };
 		4236EA7A1B19EBEC000DA31F /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA761B19EBEC000DA31F /* thumbnail.png */; };
 		4236EA7B1B19EBEC000DA31F /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA771B19EBEC000DA31F /* thumbnail@2x.png */; };
 		4236EA7C1B19EBEC000DA31F /* SwiftBubble.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA781B19EBEC000DA31F /* SwiftBubble.mov */; };
@@ -279,7 +278,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Felix Grabowski";
 				TargetAttributes = {
 					4236EA641B19EB81000DA31F = {
@@ -327,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4236EA7A1B19EBEC000DA31F /* thumbnail.png in Resources */,
-				4236EA791B19EBEC000DA31F /* SoapBubble.qtz in Resources */,
 				4236EA7B1B19EBEC000DA31F /* thumbnail@2x.png in Resources */,
 				4236EA7C1B19EBEC000DA31F /* SwiftBubble.mov in Resources */,
 			);
@@ -372,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This script will put a link to the screen saver in the current user's Screen Saver folder (~/library/Screen Savers/) if you're building in debug, but clears out the screen saver for release builds.\n\n# Make sure Screen Savers folder exists\n#if ! [ -d \"${USER_LIBRARY_DIR}/Screen Savers\" ]; then\n#mkdir \"${USER_LIBRARY_DIR}/Screen Savers\"\n#fi\n\n\n# Clean up any previous products/symbolic links in the Screen Savers folder\nif [ -a \"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\" ]; then\nrm -Rf \"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\"\nfi\n\n# Depending on the build configuration, link to the most recent product\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n# if we're debugging, add a symbolic link to the screen saver\nln -sf \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \\\n\"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\"\nfi";
+			shellScript = "# This script will put a link to the screen saver in the current user's Screen Saver folder (~/library/Screen Savers/) if you're building in debug, but clears out the screen saver for release builds.\n\n# Make sure Screen Savers folder exists\n#if ! [ -d \"${USER_LIBRARY_DIR}/Screen Savers\" ]; then\n#mkdir \"${USER_LIBRARY_DIR}/Screen Savers\"\n#fi\n\n\n# Clean up any previous products/symbolic links in the Screen Savers folder\nif [ -a \"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\" ]; then\nrm -Rf \"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\"\nfi\n\n# Depending on the build configuration, link to the most recent product\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n# if we're debugging, add a symbolic link to the screen saver\nln -sf \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \\\n\"${USER_LIBRARY_DIR}/Screen Savers/${FULL_PRODUCT_NAME}\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -445,12 +443,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -477,11 +477,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -498,12 +499,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -523,11 +526,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -547,8 +551,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -568,8 +573,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
@@ -624,6 +630,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -637,6 +644,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

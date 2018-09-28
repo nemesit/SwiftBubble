@@ -11,8 +11,10 @@ import ScreenSaver
 import AVFoundation
 import AVKit
 
+@objc(SwiftBubbleView)
 class SwiftBubbleView: ScreenSaverView {
     
+    @objc public static var test:Int = 24
     var videoView:NSView!
     let frameRate = 29.97
     var player:AVPlayer!
