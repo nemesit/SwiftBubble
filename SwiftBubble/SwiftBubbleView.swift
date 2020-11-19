@@ -10,131 +10,56 @@
 import ScreenSaver
 import AVFoundation
 import AVKit
+import SwiftUI
 
+@available(OSX 10.15, *)
 @objc(SwiftBubbleView)
-class SwiftBubbleView: ScreenSaverView {
-    
-    @objc public static var test:Int = 24
-    var videoView:NSView!
-    let frameRate = 29.97
-    var player:AVPlayer!
-    
-    convenience init() {
-        self.init(frame: CGRect.zero, isPreview: false)
-    }
-    
-    static var layerClass: AnyClass {
-		return AVPlayerLayer.self
-	}
-    
-    override init!(frame: NSRect, isPreview: Bool) {
-        super.init(frame: frame, isPreview: isPreview)
-        self.animationTimeInterval = 1.0 / frameRate
-        
-        guard let soapBubblePath = Bundle(for: type(of: self)).path(forResource: "SwiftBubble", ofType: "mov") else {
-            fatalError("path to bubble not found")
-        }
-        
-        let fileURL = URL(fileURLWithPath: soapBubblePath)
-        let asset = AVAsset(url: fileURL)
-        let playerItem = AVPlayerItem(asset: asset)
-        player = AVPlayer(playerItem: playerItem)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-        
-        let videoView = NSView(frame: NSMakeRect(0, 0, NSWidth(frame)/2, NSHeight(frame)/2))
-        videoView.wantsLayer = true
+public class SwiftBubbleView: ScreenSaverView {
 
-        centerView(videoView, inView: self)
-        playerLayer.frame = videoView.frame
-        videoView.layer = playerLayer
-//        playerLayer.backgroundColor = NSColor.white.cgColor /// for debugging the view
-        
-        self.addSubview(videoView)
-        
-        //loop
-        player.actionAtItemEnd = .none
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    
-    override func startAnimation() {
-        player.play()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(SwiftBubbleView.restartVideo),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-                                               object: player.currentItem)
-        super.startAnimation()
-    }
-    
-    override func stopAnimation() {
-        NotificationCenter.default.removeObserver(self)
-        super.stopAnimation()
-    }
-    
-    override func draw(_ rect: NSRect) {
-        super.draw(rect)
-    }
-    
-    override func animateOneFrame() {
-    }
-    
-    override var hasConfigureSheet: Bool {
-        return false
-    }
-    
-    override var configureSheet: NSWindow? {
-        return nil
-    }
-    
-    @objc func restartVideo() {
-        let seconds:Int64 = 0
-        let preferredTimeScale:Int32 = 1
-        let seekTime:CMTime = CMTimeMake(seconds, preferredTimeScale)
-        player.seek(to: seekTime)
-        player.play()
-    }
-    
-    func centerView(_ v1:NSView, inView v2:NSView) {
-        
-        v1.translatesAutoresizingMaskIntoConstraints = false
-        v2.translatesAutoresizingMaskIntoConstraints = false
-        let multiplier:CGFloat = 0.75 // video scaling
-        let equalWidth = NSLayoutConstraint(item: v1,
-                                       attribute:NSLayoutConstraint.Attribute.width,
-                                       relatedBy:NSLayoutConstraint.Relation.equal,
-                                          toItem:self,
-                                       attribute:NSLayoutConstraint.Attribute.width,
-                                      multiplier:multiplier,
-                                        constant:0);
-        let equalHeight = NSLayoutConstraint(item: v1,
-                                        attribute:NSLayoutConstraint.Attribute.height,
-                                        relatedBy:NSLayoutConstraint.Relation.equal,
-                                           toItem:self,
-                                        attribute:NSLayoutConstraint.Attribute.height,
-                                       multiplier:multiplier,
-                                         constant:0);
-        let centerX = NSLayoutConstraint(item: v1,
-                                    attribute:NSLayoutConstraint.Attribute.centerX,
-                                    relatedBy:NSLayoutConstraint.Relation.equal,
-                                       toItem:self,
-                                    attribute:NSLayoutConstraint.Attribute.centerX,
-                                   multiplier:1.0,
-                                     constant:0);
-        let centerY = NSLayoutConstraint(item: v1,
-                                    attribute:NSLayoutConstraint.Attribute.centerY,
-                                    relatedBy:NSLayoutConstraint.Relation.equal,
-                                       toItem:self,
-                                    attribute:NSLayoutConstraint.Attribute.centerY,
-                                   multiplier:1.0,
-                                     constant:0);
-        
-        v2.addConstraint(equalWidth)
-        v2.addConstraint(equalHeight)
-        v2.addConstraint(centerX)
-        v2.addConstraint(centerY)
-    }
+   @objc public var onDidChange: ((Float) -> Void)?
+
+  public override init(frame frameRect: NSRect, isPreview: Bool) {
+    super.init(frame: frameRect, isPreview: isPreview)!
+      wantsLayer = true
+      layer?.backgroundColor = NSColor.lightGray.cgColor
+      let view = NSHostingView(rootView: SwiftBubbleVideoView())
+      view.translatesAutoresizingMaskIntoConstraints = false
+      addSubview(view)
+      leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+      trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+      topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+      bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+   }
+  
+  required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+  
 }
+struct SwiftBubbleVideoView: View {
+  
+  var playerItem: AVPlayerItem
+  var player: AVQueuePlayer
+  var looper: AVPlayerLooper
+ 
+  init() {
+    playerItem = AVPlayerItem(asset: AVAsset(url: Bundle(for: SwiftBubbleView.self).url(forResource: "SwiftBubble", withExtension: "mov")!))
+    player = AVQueuePlayer(playerItem: playerItem)
+    looper = AVPlayerLooper(player: player, templateItem: playerItem)
+  }
+  
+  var body: some View {
+    GeometryReader { geometry in
+      ZStack(alignment: .bottom) {
+        VideoPlayer.init(player: player)
+          .scaleEffect(CGSize(width: 0.7, height: 0.7))
+          .onAppear() { player.play() }
+          .onDisappear() { player.pause() }
+        VStack(alignment: .leading) {
+          Color.clear
+          Color.black
+            .frame(width: geometry.size.width, height: geometry.size.height * 0.17, alignment: .bottom)
+        }
+      }
+    }
+  }
+}
+
