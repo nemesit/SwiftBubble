@@ -58,7 +58,7 @@ struct SwiftBubbleVideoView: View {
         VStack(alignment: .leading) {
           Color.clear
           Color.black
-            .frame(width: geometry.size.width, height: geometry.size.height * 0.17, alignment: .bottom)
+            .frame(width: geometry.size.width, height: geometry.size.height * 0.18, alignment: .bottom)
         }
       }
     }
