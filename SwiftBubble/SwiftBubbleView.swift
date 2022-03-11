@@ -39,9 +39,11 @@ struct SwiftBubbleVideoView: View {
   var playerItem: AVPlayerItem
   var player: AVQueuePlayer
   var looper: AVPlayerLooper
- 
+  
   init() {
-    playerItem = AVPlayerItem(asset: AVAsset(url: Bundle(for: SwiftBubbleView.self).url(forResource: "SwiftBubble", withExtension: "mov")!))
+//    playerItem = AVPlayerItem(asset: AVAsset(url: Bundle(for: SwiftBubbleView.self).url(forResource: "SwiftBubble", withExtension: "mov")!))
+    playerItem = AVPlayerItem(asset: AVAsset(url: Bundle(for: SwiftBubbleView.self).url(forResource: "swiftbubble_deblocked", withExtension: "m4v")!))
+
     player = AVQueuePlayer(playerItem: playerItem)
     looper = AVPlayerLooper(player: player, templateItem: playerItem)
   }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4204425A257683C400832774 /* swift_bubble_10bit_hdr.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42044259257683C400832774 /* swift_bubble_10bit_hdr.m4v */; };
+		42044260257686A900832774 /* swiftbubble_deblocked.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 4204425F257686A900832774 /* swiftbubble_deblocked.m4v */; };
 		4236EA741B19EBAB000DA31F /* SwiftBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236EA731B19EBAB000DA31F /* SwiftBubbleView.swift */; };
 		4236EA7A1B19EBEC000DA31F /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA761B19EBEC000DA31F /* thumbnail.png */; };
 		4236EA7B1B19EBEC000DA31F /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236EA771B19EBEC000DA31F /* thumbnail@2x.png */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42044259257683C400832774 /* swift_bubble_10bit_hdr.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = swift_bubble_10bit_hdr.m4v; sourceTree = "<group>"; };
+		4204425F257686A900832774 /* swiftbubble_deblocked.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiftbubble_deblocked.m4v; sourceTree = "<group>"; };
 		4236EA651B19EB81000DA31F /* SwiftBubble.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBubble.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		4236EA691B19EB81000DA31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4236EA731B19EBAB000DA31F /* SwiftBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBubbleView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				4236EA751B19EBEC000DA31F /* SoapBubble.qtz */,
+				42044259257683C400832774 /* swift_bubble_10bit_hdr.m4v */,
+				4204425F257686A900832774 /* swiftbubble_deblocked.m4v */,
 				4236EA771B19EBEC000DA31F /* thumbnail@2x.png */,
 				4236EA761B19EBEC000DA31F /* thumbnail.png */,
 				4236EA781B19EBEC000DA31F /* SwiftBubble.mov */,
@@ -278,14 +284,14 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Felix Grabowski";
 				TargetAttributes = {
 					4236EA641B19EB81000DA31F = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = RH89HEC84R;
+						DevelopmentTeam = UQ4B4U96F6;
 						LastSwiftMigration = 1220;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					4236EAA31B19ECAD000DA31F = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -326,8 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4236EA7A1B19EBEC000DA31F /* thumbnail.png in Resources */,
+				42044260257686A900832774 /* swiftbubble_deblocked.m4v in Resources */,
 				4236EA7B1B19EBEC000DA31F /* thumbnail@2x.png in Resources */,
 				4236EA7C1B19EBEC000DA31F /* SwiftBubble.mov in Resources */,
+				4204425A257683C400832774 /* swift_bubble_10bit_hdr.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,15 +552,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = RH89HEC84R;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = UQ4B4U96F6;
 				INFOPLIST_FILE = SwiftBubble/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixgebhard.SwiftBubble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -567,15 +579,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = RH89HEC84R;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = UQ4B4U96F6;
 				INFOPLIST_FILE = SwiftBubble/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.felixgrabowski.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixgebhard.SwiftBubble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;

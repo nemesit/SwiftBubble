@@ -15,13 +15,13 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015 Felix Grabowski. All rights reserved.</string>
+	<string>Copyright © 2015 Felix Gebhard. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>SwiftBubbleView</string>
 </dict>
